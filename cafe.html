@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body class="cafe-world_body">
+    <header class="main_header">
+      <div class="main_header-top">
+        <div class="main_header-home">
+          <a href="index.html">
+            <i class="fas fa-home"></i>
+          </a>
+        </div>
+        <div class="main_header-language">
+          <div class="main_header-language-i">
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="main_header-language-text">
+            <span>언어를 선택해주세요.</span>
+          </div>
+          <div class="main_header-language-sort">
+            <span>한국어</span>
+            <span>ENG</span>
+            <span>中文</span>
+            <span>日本語</span>
+          </div>
+        </div>
+      </div>
+      <div class="main_header-title">
+        <div class="main_header-text">
+          <span>현재 보고있는 지역은</span>
+        </div>
+        <div class="main_header-region">
+          <div class="main_header-region-text">송탄-미군부대,신장동</div>
+          <div class="main_header-region-chevron">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="main_header-text">
+          <span>입니다.</span>
+        </div>
+      </div>
+      <nav class="main_header-food">
+        <ul class="main_header-food-ul">
+          <li class="main_header-food-list">
+            <div class="main_header-food-list-img">
+              <a href="hansik.html"><i class="fas fa-utensils"></i></a>
+            </div>
+            <span class="main_header-food-list-text">한식</span>
+          </li>
+          <li class="main_header-food-list">
+            <div class="main_header-food-list-img">
+              <a href="hambuger.html"><i class="fas fa-hamburger"></i></a>
+            </div>
+            <span class="main_header-food-list-text">수제버거/양식</span>
+          </li>
+          <li class="main_header-food-list">
+            <div
+              class="main_header-food-list-img main_header-food-list-cafe-img"
+            >
+              <a href="cafe.html"><i class="fas fa-coffee"></i></a>
+            </div>
+            <span class="main_header-food-list-text">카페/디저트</span>
+          </li>
+          <li class="main_header-food-list">
+            <div class="main_header-food-list-img">
+              <a href="world_food.html"><i class="fas fa-utensils"></i></a>
+            </div>
+            <span class="main_header-food-list-text">일/중/세계음식</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="cafe">
+      <div class="cafe_screen">
+        <div class="cafe_screen-first-column">
+          <div class="cafe_screen-column-user">
+            <div class="cafe_screen-column-user-img">
+              <img src="img/user.jpg" />
+            </div>
+            <div class="cafe_screen-column-user-border"></div>
+            <div class="cafe_screen-column-user-status">
+              <span>오늘은</span>
+              <i class="far fa-laugh-wink"></i>
+              <span>즐거움</span>
+            </div>
+          </div>
+          <div class="cafe_screen-column-welcome">
+            <span>사이좋은 사람들</span>
+            <span>여기는 미군부대^~~^</span>
+          </div>
+          <div class="cafe_screen-column-cafe-introduce">
+            <span>여기는 카페 씨에프</span>
+            <div>
+              <select name="menu" id="menu-select">
+                <option value="opt1">커피</option>
+                <option value="opt2">라떼</option>
+                <option value="opt3">아포가토</option>
+                <option value="opt4">쉐이크</option>
+                <option value="opt5">에이드</option>
+                <option value="opt6">파르페</option>
+                <option value="opt7">칵테일</option>
+                <option value="opt8">와인</option>
+              </select>
+            </div>
+            <span>메뉴를 골라주세요~~!</span>
+          </div>
+        </div>
+        <div class="cafe_screen-second-column cafe_screen-second-column-exception">
+          <div class="cafe_screen-second-column-info">
+            <ul>
+              <li><span>인포메이션</span></li>
+              <li><span>전화번호:031-665-2936</span></li>
+              <li><span>시간표</span></li>
+              <li><span>주말 12:00 - 00:30</span></li>
+              <li><span>평일 12:00 - 24:00</span></li>
+            </ul>
+            <table>
+              <tr>
+                <td>위치</td>
+                <td>
+                  <a
+                  href="https://map.naver.com/v5/entry/place/17992261?c=14143401.3185766,4450388.3205335,13,0,0,0,dh&placePath=%2Fhome%3Fentry=plt"
+                 target="_blank">
+                  <img src="img/map.png" />
+                </td>
+              </tr>
+              <tr>
+                <td>리뷰</td>
+                <td>
+                  <a
+                    href="https://blog.naver.com/PostView.nhn?blogId=skl0ve&logNo=221769359852&redirect=Dlog&widgetTypeCall=true&topReferer=https%3A%2F%2Fpcmap.place.naver.com%2Frestaurant%2F17992261%2Freview%2Fugc&directAccess=false"
+                  target="_blank" >
+                    <img src="img/blog.png" />
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>페이스북</td>
+                <td>
+                  <a
+                    href="https://www.facebook.com/%EC%94%A8%EC%97%90%ED%94%84%EC%B9%B4%ED%8E%98-cf-1439743322963064/"
+                   target="_blank">
+                    <img src="img/facebook1.png" />
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="cafe_screen-second-column-photo">
+            <img src="img/cafe/cafe_c.f.jpeg" />
+            <div class="cafe_screen-second-column-photo-bunch">
+            <img src="img/cafe/c.f_food1.jpg">
+            <img src="img/cafe/c.f_food2.jpg">
+            <img src="img/cafe/c.f_food3.jpg">
+          </div>
+          
+          </div>
+        </div>
+      </div>
+      <!-- 1th cafe-->
+      <div class="cafe_screen">
+        <div class="cafe_screen-first-column">
+          <div class="cafe_screen-column-user">
+            <div class="cafe_screen-column-user-img">
+              <img src="img/user.jpg" />
+            </div>
+            <div class="cafe_screen-column-user-border"></div>
+            <div class="cafe_screen-column-user-status">
+              <span>오늘은</span>
+              <i class="far fa-laugh-wink"></i>
+              <span>즐거움</span>
+            </div>
+          </div>
+          <div class="cafe_screen-column-welcome">
+            <span>사이좋은 사람들</span>
+            <span>여기는 미군부대^~~^</span>
+          </div>
+          <div class="cafe_screen-column-cafe-introduce">
+            <span>여기는 카멜 에스프레소</span>
+            <div>
+              <select name="menu" id="menu-select">
+                <option value="opt1">와플</option>
+                <option value="opt2">라떼</option>
+                <option value="opt3">아메리카노</option>
+                <option value="opt4">카푸치노</option>
+                <option value="opt5">버블티</option>
+                <option value="opt6">조각 케잌</option>
+                <option value="opt7">에이드</option>
+                <option value="opt8">생과일 주스</option>
+              </select>
+            </div>
+            <span>메뉴를 골라주세요~~!</span>
+          </div>
+        </div>
+        <div class="cafe_screen-second-column">
+          <div class="cafe_screen-second-column-info">
+            <ul>
+              <li><span>인포메이션</span></li>
+              <li><span>전화번호:031-666-4112</span></li>
+              <li><span>시간표</span></li>
+              <li><span>매일 11:00 - 23:30</span></li>
+              <li><span>연중무휴</span></li>
+            </ul>
+            <table>
+              <tr>
+                <td>위치</td>
+                <td>
+                  <a
+                  href="https://map.naver.com/v5/entry/place/20785895?c=14143254.0830615,4450337.0666338,13,0,0,0,dh&placePath=%2Fhome%3Fentry=plt"
+                 target="_blank">
+                  <img src="img/map.png" />
+                </td>
+              </tr>
+              <tr>
+                <td>리뷰</td>
+                <td>
+                  <a
+                    href="https://m.blog.naver.com/PostView.nhn?blogId=s_hui&logNo=220598334598&proxyReferer=https:%2F%2Fwww.google.com%2F"
+                  target="_blank" >
+                    <img src="img/blog.png" />
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>식신</td>
+                <td>
+                  <a
+                    href="https://www.siksinhot.com/P/408823"
+                   target="_blank">
+                    <img src="img/Shikshin.png" />
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="cafe_screen-second-column-photo">
+            <img src="img/cafe/camel_exterior.jpg" />
+            <div class="cafe_screen-second-column-photo-bunch">
+            <img src="img/cafe/camel_food1.jpg">
+            <img src="img/cafe/camel_food2.jpg">
+            <img src="img/cafe/camel_food3.jpg">
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- 2th cafe-->
+      <div class="cafe_screen">
+        <div class="cafe_screen-first-column">
+          <div class="cafe_screen-column-user">
+            <div class="cafe_screen-column-user-img">
+              <img src="img/user.jpg" />
+            </div>
+            <div class="cafe_screen-column-user-border"></div>
+            <div class="cafe_screen-column-user-status">
+              <span>오늘은</span>
+              <i class="far fa-laugh-wink"></i>
+              <span>즐거움</span>
+            </div>
+          </div>
+          <div class="cafe_screen-column-welcome">
+            <span>사이좋은 사람들</span>
+            <span>여기는 미군부대^~~^</span>
+          </div>
+          <div class="cafe_screen-column-cafe-introduce">
+            <span>여기는 오브 커피</span>
+            <div>
+              <select name="menu" id="menu-select">
+                <option value="opt1">아메리카노</option>
+                <option value="opt2">화이트 비엔나</option>
+                <option value="opt3">자몽 에이드</option>
+                <option value="opt4">리얼 밀크티</option>
+                <option value="opt5">앙버터 토스트</option>
+                <option value="opt6">아보카도 토스트</option>
+              </select>
+            </div>
+            <span>메뉴를 골라주세요~~!</span>
+          </div>
+        </div>
+        <div class="cafe_screen-second-column">
+          <div class="cafe_screen-second-column-info">
+            <ul>
+              <li><span>인포메이션</span></li>
+              <li><span>전화번호:031-665-2936</span></li>
+              <li><span>시간표</span></li>
+              <li><span>주말 12:00 - 00:30</span></li>
+              <li><span>평일 12:00 - 24:00</span></li>
+            </ul>
+            <table>
+              <tr>
+                <td>위치</td>
+                <td>
+                  <a
+                  href="https://map.naver.com/v5/entry/place/658235334?c=14145130.7063415,4451616.0903004,12,0,0,0,dh"
+                 target="_blank">
+                  <img src="img/map.png" />
+                </td>
+              </tr>
+              <tr>
+                <td>리뷰</td>
+                <td>
+                  <a
+                    href="https://m.blog.naver.com/malang_tube/221913338401"
+                  target="_blank" >
+                    <img src="img/blog.png" />
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>식신</td>
+                <td>
+                  <a
+                    href="https://www.siksinhot.com/P/619892"
+                   target="_blank">
+                    <img src="img/Shikshin.png" />
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="cafe_screen-second-column-photo">
+            <img src="img/cafe/of_exterior.jpg" />
+            <div class="cafe_screen-second-column-photo-bunch">
+            <img src="img/cafe/of_food1.jpg">
+            <img src="img/cafe/of_food2.jpg">
+            <img src="img/cafe/of_food3.jpg">
+          </div>
+          
+          </div>
+        </div>
+      </div>
+      <!-- 3th cafe-->
+    </div>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<!-- 계획:
+1.오시는 길
+2.ABOUT 미군부대
+3.행사
+4.뉴스
+5.거리 사진들
+home의 TEMA는 노란색
+음식의 종류별로 색깔 tema정하기
+ex)부대찌개-빨간색 -->

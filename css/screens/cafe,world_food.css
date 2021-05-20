@@ -1,0 +1,172 @@
+/* div>div>div*2 이런 구조이다. */
+.cafe {
+  width: 100%;
+  margin-top: 150px;
+  padding: 0px 10px;
+}
+.cafe_screen {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+}
+
+.cafe_screen-second-column {
+  margin-left: 200px;
+}
+.cafe_screen-column-user-img {
+  width: 156px;
+  height: 156px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1px;
+  margin-left: 5px;
+}
+.cafe_screen-column-user-img img {
+  width: inherit;
+  height: inherit;
+}
+/* width,height를 inherit해주어서 부모태그인
+div의 content의 width와 height값을 갖게 해주었다.*/
+.cafe_screen-column-user-border {
+  margin-left: 5px;
+  width: 160px;
+  height: 1px;
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.1);
+}
+.cafe_screen-column-user-status {
+  display: flex;
+  width: 150px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  padding: 3px;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+.cafe_screen-column-user-status span {
+  margin: 0px 5px;
+}
+.cafe_screen-column-user-status span:first-child {
+  color: var(--cafe-font-color);
+}
+.cafe_screen-column-welcome {
+  margin: 30px 0px;
+}
+.cafe_screen-column-welcome span:last-child {
+  margin-top: 5px;
+  display: block;
+}
+/* margin-top을 가지고 나란히 오지 않게
+display:block을 해주었다. */
+.cafe_screen-column-cafe-introduce span:first-child {
+  color: chocolate;
+  font-weight: 800;
+}
+.cafe_screen-column-cafe-introduce select {
+  margin: 10px 0px;
+}
+.cafe_screen-second-column {
+  margin-right: 100px;
+}
+.cafe_screen-second-column-info {
+  display: Flex;
+  justify-content: space-between;
+}
+.cafe_screen-second-column-info > ul > li:first-child > span {
+  color: var(--cafe-font-color);
+}
+.cafe_screen-second-column-info > ul li {
+  margin-bottom: 5px;
+}
+/* inline-b */
+/* display:flex로 한 라인안에 오게 해주었고
+justify-content로 가로축을 space-between해주었다. */
+table,
+td,
+th {
+  border: 1px solid #333;
+}
+.cafe_screen-second-column-photo {
+  display: flex;
+}
+.cafe_screen-second-column-photo img {
+  width: 400px;
+  height: 200px;
+  margin-top: 15px;
+}
+table img {
+  width: 50px;
+  height: 50px;
+}
+.cafe_screen-second-column-photo-bunch img {
+  width: 120px;
+  height: 57px;
+  display: block;
+  margin-left: 20px;
+}
+@media screen and (min-width: 450px) and (max-width: 952px) {
+  .cafe_screen-second-column {
+    margin-left: 0px;
+  }
+  .cafe_screen-second-column-photo > img {
+    width: 200px;
+  }
+}
+/* width:450~920px일때 .cafe_screen-second-column이 잘 보일수있게 설정.*/
+@media screen and (max-device-width: 800px) {
+  .cafe-world_body .main_header span {
+    font-size: 13px;
+  }
+  .cafe_screen {
+    margin-top: 30px;
+    padding-right: 30px;
+  }
+  .cafe_screen span {
+    font-size: 10px;
+  }
+  .cafe_screen-column-welcome {
+    margin-top: 50px;
+  }
+  .cafe_screen-column-welcome,
+  .cafe_screen-column-cafe-introduce {
+    margin-left: 5px;
+  }
+  .cafe_screen .cafe_screen-second-column {
+    margin-left: 0px;
+    margin: 30px 0px;
+  }
+  .cafe_screen .cafe_screen-second-column-exception {
+    width: 90%;
+    height: 90%;
+    margin-left: 20px;
+  }
+  .cafe_screen-first-column {
+    margin-right: 50px;
+  }
+  .cafe_screen-second-column-photo img {
+    width: 100px;
+    height: 100px;
+  }
+  .cafe_screen-second-column-photo-bunch img {
+    width: 50px;
+    height: 50px;
+  }
+  .cafe_screen-column-user {
+    width: 100px;
+    height: 100px;
+  }
+  .cafe_screen-column-user-img {
+    width: 100px;
+    height: 100px;
+  }
+  .cafe_screen-column-user-border {
+    width: 100px;
+  }
+  .cafe_screen-column-user-status {
+    width: 100px;
+  }
+  .cafe_screen:last-child select {
+    width: 90px;
+  }
+}

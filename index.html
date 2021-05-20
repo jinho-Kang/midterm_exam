@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <!-- css(Internal) -->
+    <style type="text/css">
+      /* header>div*4를 가진 구조이다. */
+      .user_profile {
+        width: 100%;
+      }
+      .user_profile-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 70px;
+        margin-top: 120px;
+      }
+      .user_profile-info-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+      .user_profile-info-column-digit {
+        font-size: 35px;
+        font-weight: 600;
+        padding-bottom: 20px;
+      }
+      .user_profile-info-face {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 50px;
+        margin-top: 40px;
+      }
+      .user_profile-info-face span {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+      .user_profile-info-face > img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+      /* notification이 position:absolute라서
+부모 태그인 edit의 position:relative해주었다.
+이러면 notification의 처음 위치는
+.user_profile-change-edit이 된다. */
+      .user_profile-change-edit a:hover {
+        color: tomato;
+      }
+      .user_profile-change-edit a:visited {
+        color: navy;
+      }
+      .user_profile-change-edit,
+      .user_profile-change-save {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 7px;
+        width: 49%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 500;
+      }
+      .user_profile-images {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 80px;
+      }
+      .user_profile-image {
+        opacity: 0.5;
+        width: 50%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+      }
+      @keyframes imagehover {
+        from {
+          transform: none;
+        }
+        to {
+          border-bottom: 3px solid rgba(0, 0, 0, 1);
+        }
+      }
+      .user_profile-image:hover {
+        animation: imagehover linear 1s forwards;
+      }
+      /* hover상태일때 */
+      .user_profile-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 120px;
+      }
+      .user_profile-text-row {
+        font-size: 30px;
+      }
+      .user_profile-text-row:first-child {
+        font-weight: 600;
+      }
+      .user_profile-text-row:nth-child(2) {
+        opacity: 0.5;
+        font-size: 20px;
+      }
+      .user_profile-text-row:last-child {
+        color: #23a7e0;
+        font-size: 20px;
+        margin-top: 30px;
+      }
+      .user_profile-text-row:first-child,
+      .user_profile-text-row:nth-child(2) {
+        margin-bottom: 50px;
+      }
+      .user_profile-change-edit-notification {
+        width: 15px;
+        height: 15px;
+        background-color: tomato;
+        border-radius: 50%;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        animation: notification 1s infinite;
+      }
+      @keyframes notification {
+        0% {
+          transform: none;
+        }
+        50% {
+          transform: translate(-10px);
+        }
+        100% {
+          transform: none;
+        }
+      }
+      @media screen and (max-device-width: 800px) {
+        .user_profile-info-face > img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+        .user_profile-info-column {
+          margin-left: 15px;
+          margin-top: 50px;
+        }
+        .user_profile-info span {
+          font-size: 10px;
+        }
+        iframe {
+          width: 100px;
+          height: 100px;
+        }
+        .main_header span {
+          font-size: 10px;
+        }
+      }
+      .user_profile-info-face > span {
+        font-size: 25px;
+        font-weight: 700;
+      }
+      .user_profile-change {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 40px;
+      }
+      .user_profile-change-edit {
+        position: relative;
+      }
+      /* 모바일 가로모드 */
+    </style>
+  </head>
+  <body>
+    <header class="main_header">
+      <div class="main_header-top">
+        <div class="main_header-home">
+          <a href="index.html">
+            <i class="fas fa-home"></i>
+          </a>
+        </div>
+        <div class="main_header-language">
+          <div class="main_header-language-i">
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="main_header-language-text">
+            <span>언어를 선택해주세요.</span>
+          </div>
+          <div class="main_header-language-sort">
+            <span>한국어</span>
+            <span>ENG</span>
+            <span>中文</span>
+            <span>日本語</span>
+          </div>
+        </div>
+      </div>
+      <div class="main_header-title">
+        <div class="main_header-text">
+          <span>현재 보고있는 지역은</span>
+        </div>
+        <div class="main_header-region">
+          <div class="main_header-region-text">송탄-미군부대,신장동</div>
+          <div class="main_header-region-chevron">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="main_header-text">
+          <span>입니다.</span>
+        </div>
+      </div>
+      <nav class="main_header-food">
+        <ul class="main_header-food-ul">
+          <li class="main_header-food-list">
+            <div class="main_header-food-list-img">
+              <a href="hansik.html"><i class="fas fa-utensils"></i></a>
+            </div>
+            <span class="main_header-food-list-text">한식</span>
+          </li>
+          <li class="main_header-food-list">
+            <div
+              class="main_header-food-list-img main_header-food-list-hambuger-img"
+            >
+              <a href="hambuger.html"><i class="fas fa-hamburger"></i></a>
+            </div>
+            <span class="main_header-food-list-text">수제버거/양식</span>
+          </li>
+          <li class="main_header-food-list">
+            <div class="main_header-food-list-img">
+              <a href="cafe.html"><i class="fas fa-coffee"></i></a>
+            </div>
+            <span class="main_header-food-list-text">카페/디저트</span>
+          </li>
+          <li class="main_header-food-list">
+            <div class="main_header-food-list-img">
+              <a href="world_food.html"><i class="fas fa-utensils"></i></a>
+            </div>
+            <span class="main_header-food-list-text">일/중/세계음식</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <header class="user_profile">
+      <div class="user_profile-info">
+        <div class="user_profile-info-face">
+          <img src="img/u.s_army.jpg" />
+          <span>미군부대</span>
+        </div>
+        <div class="user_profile-info-column">
+          <span class="user_profile-info-column-digit">3</span
+          ><span>게시물</span>
+        </div>
+        <div class="user_profile-info-column">
+          <span class="user_profile-info-column-digit">15.5천</span
+          ><span>팔로워</span>
+        </div>
+        <div class="user_profile-info-column">
+          <span class="user_profile-info-column-digit">870</span
+          ><span>팔로우</span>
+        </div>
+      </div>
+      <div class="user_profile-change">
+        <div class="user_profile-change-edit">
+          <a href="survey.html">설문조사</a>
+          <div class="user_profile-change-edit-notification"></div>
+        </div>
+        <div class="user_profile-change-save">저장됨</div>
+      </div>
+      <div class="user_profile-images">
+        <div class="user_profile-image"><i class="fas fa-th fa-4x"></i></div>
+        <div class="user_profile-image">
+          <i class="far fa-user-circle fa-4x"></i>
+        </div>
+      </div>
+      <div class="user_profile-text">
+        <div class="user_profile-text-row">미군부대</div>
+        <div class="user_profile-text-row">볼 것과 즐길 것이 가득 한 이 곳</div>
+        <div class="user_profile-text-row">
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/FvOUHFOFfGY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/IOqBGae2Vyg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/3PNMhlKNgXQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <!-- screen width 500~868까지 iframe의 width값을 줄여준다. -->
+        </div>
+        <div class="user_profile-text-row">꼭 한번 방문해보세요!</div>
+      </div>
+    </header>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

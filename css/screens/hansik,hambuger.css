@@ -1,0 +1,86 @@
+/* section>article,aside
+article>div>div*2,a*3,aside>img*3
+단순하게 이런 구조이다.*/
+.hambuger_screen {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+/*main_header.css에서 position:fixed와 z-index를 
+해주어 .hambuger_screen이 안 보일 것을 염려하여 margin-top을 크게 주었다.
+,display:flex,justify-content:space-between를 통해
+각 article을 떨어뜨려 주었다. */
+.hambuger_screen article span {
+  color: var(--hansik-hamburger-font-color);
+}
+/* variables.css에서 :root{}를 통해 칼라 이름을
+정해두었고 여기서 사용하였다. */
+.hambuger_screen-content-title {
+  color: var(--hansik-hambuger-color);
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.hambuger_screen-content-info span {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+/* span은 원래 default가 inline이라 margin-bottom값을
+못 가지지만 inline-block을 통해 가질수 있게 해주었다. */
+.hambuger_screen-content img {
+  width: 50px;
+}
+.hambuger_screen .hambuger_screen-content > div img {
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--hansik-hambuger-color);
+}
+.hambuger_screen-content-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.hambuger_aside img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 5px;
+}
+/* default가 inline인 img를 display:block을
+통해 각각 한 층을 가질 수 있게 해주었다. */
+.hambuger_screen article:first-child {
+  margin-left: 30px;
+}
+.hambuger_aside {
+  margin-right: 30px;
+}
+.hambuger_screen-content-sns-text {
+  margin-left: 10px;
+}
+.hambuger_screen-content a {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-device-width: 800px) {
+  .hambuger_body .main_header span,
+  .hansik_body .main_header span {
+    font-size: 13px;
+  }
+  section span {
+    font-size: 10px;
+  }
+  article {
+    margin-left: 20px;
+  }
+  .hambuger_aside img {
+    width: 50px;
+    height: 50px;
+  }
+  .hambuger_screen-content img {
+    width: 30px;
+    height: 30px;
+  }
+  .hambuger_screen-content-title {
+    font-size: 10px;
+  }
+}

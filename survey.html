@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body class="survey_body">
+    <header class="main_header">
+      <div class="main_header-top">
+        <div class="main_header-home">
+          <a href="index.html">
+            <i class="fas fa-home"></i>
+          </a>
+        </div>
+        <div class="main_header-language">
+          <div class="main_header-language-i">
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="main_header-language-text">
+            <span>언어를 선택해주세요.</span>
+          </div>
+          <div class="main_header-language-sort">
+            <span>한국어</span>
+            <span>ENG</span>
+            <span>中文</span>
+            <span>日本語</span>
+          </div>
+        </div>
+      </div>
+      <div class="main_header-title">
+        <div class="main_header-text">
+          <span>현재 보고있는 지역은</span>
+        </div>
+        <div class="main_header-region">
+          <div class="main_header-region-text">송탄-미군부대,신장동</div>
+          <div class="main_header-region-chevron">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="main_header-text">
+          <span>입니다.</span>
+        </div>
+      </div>
+      <nav class="main_header-food">
+        <ul class="main_header-food-ul">
+          <li class="main_header-food-list">
+            <div class="main_header-food-list-img">
+              <a href="hansik.html"><i class="fas fa-utensils"></i></a>
+            </div>
+            <span class="main_header-food-list-text">한식</span>
+          </li>
+          <li class="main_header-food-list">
+            <div
+              class="main_header-food-list-img main_header-food-list-hambuger-img"
+            >
+              <a href="hambuger.html"><i class="fas fa-hamburger"></i></a>
+            </div>
+            <span class="main_header-food-list-text">수제버거/양식</span>
+          </li>
+          <li class="main_header-food-list">
+            <div class="main_header-food-list-img">
+              <a href="cafe.html"><i class="fas fa-coffee"></i></a>
+            </div>
+            <span class="main_header-food-list-text">카페/디저트</span>
+          </li>
+          <li class="main_header-food-list">
+            <div class="main_header-food-list-img">
+              <a href="world_food.html"><i class="fas fa-utensils"></i></a>
+            </div>
+            <span class="main_header-food-list-text">일/중/세계음식</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+      <!-- css(Inline) -->
+    <div style="margin-top: 200px">
+      <form style="display: flex; flex-direction: column">
+        <span style="margin-bottom: 10px">이름</span
+        ><input
+          style="border: none; border-bottom: 2px solid rgba(182,0,255,0.1)"
+          type="text"
+          name="name"
+          placeholder="단답형 텍스트"
+        />
+      </form>
+    </div>
+    <div style="margin-top: 50px">
+      <div>
+        <span>나이</span>
+        <div
+          style="
+            width: 100%;
+            height: 2px;
+            background-color: rgba(182,0,255,0.1);
+            margin-bottom: 10px;
+          "
+        ></div>
+        <ul>
+          <li><input type="radio" value="teenager" /><span>10~20대</span></li>
+          <li><input type="radio" value="twenty" /><span>20~30대</span></li>
+          <li><input type="radio" value="thirty" /><span>30~40대</span></li>
+          <li><input type="radio" value="forty" /><span>40~50대</span></li>
+          <li><input type="radio" value="fifty" /><span>50~60대</span></li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top: 50px">
+      <div>
+        <span>좋아하는 식당</span>
+        <div
+          style="
+            width: 100%;
+            height: 2px;
+            background-color: rgba(182,0,255,0.1);
+            margin-bottom: 10px;
+          "
+        ></div>
+        <span style="display: inline-block; margin-bottom: 5px">한식</span>
+        <ul>
+          <li>
+            <input type="checkbox" value="teenager" /><span>김네집</span>
+          </li>
+          <li><input type="checkbox" value="twenty" /><span>세모분식</span></li>
+          <li><input type="checkbox" value="thirty" /><span>태화분식</span></li>
+        </ul>
+      </div>
+      <span style="display: inline-block; margin-bottom: 5px; margin-top: 10px;">수제버거/양식</span>
+      <ul>
+        <li>
+          <input type="checkbox" value="teenager" /><span>브로스키친</span>
+        </li>
+        <li><input type="checkbox" value="twenty" /><span>록키즈버거</span></li>
+        <li><input type="checkbox" value="thirty" /><span>사스콰치</span></li>
+      </ul>
+    </div>
+    <span style="display: inline-block; margin-bottom: 5px; margin-top: 10px;">카페/디저트</span>
+    <ul>
+      <li>
+        <input type="checkbox" value="teenager" /><span>카페 씨에프</span>
+      </li>
+      <li><input type="checkbox" value="twenty" /><span>카멜 에스프레소</span></li>
+      <li><input type="checkbox" value="thirty" /><span>오브 커피</span></li>
+    </ul>
+  </div>
+  <span style="display: inline-block; margin-bottom: 5px; margin-top: 10px;">일/중/세계음식</span>
+  <ul>
+    <li>
+      <input type="checkbox" value="teenager" /><span>스타케밥</span>
+    </li>
+    <li><input type="checkbox" value="twenty" /><span>사왓띠</span></li>
+    <li><input type="checkbox" value="thirty" /><span>라카사</span></li>
+  </ul>
+</div>
+    </div>
+    <!-- 검색 창 -->
+    <div style="margin-top: 50px">
+      <form name="sform" action="http://google.com/search" method="get">
+        <span>다른 식당도 검색해보세요.!</span>
+        <div style="display:flex; flex-direction: column;">
+        <input style="width:30%" name="query" type="text" />
+        <input style="width:30%" type="submit" value="검색" />
+    </div>
+      </form>
+    </div>
+    <div style="margin-top: 50px">
+        <form>
+            <div style="display:flex; flex-direction: column;">
+                <label for="recommend">리뷰를 남겨주세요!</label>
+         <textarea style="width:30%;margin-bottom:10px;" id="recommend" name="recommend" rows="5" cols="33" required minlength="1"></textarea>
+          <input style="width:30%" type="submit" value="제출" />
+        </div>
+        </form>
+      </div>
+
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

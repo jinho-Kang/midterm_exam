@@ -1,0 +1,121 @@
+/*내가 만든 모든 html에 존재하는 css이기 때문에
+components는 폴더안에 따로 파일을 만들어 주었고
+main_header라고 이름을 붙여주었다. */
+.main_header-top {
+  width: 100%;
+  display: flex;
+}
+.main_header-language {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  background-color: wheat;
+}
+/* display:flex,justify-content:flex-end align-items를 통해
+language안에 div들을 정렬 해주었다. box-sizing:border-box를 통해 padding이
+늘어나도 width는 고정된 값을 갖게 해주었다.
+position:fixed를 하여 화면 상에 고정된 위치에 오게해주었고,
+z-index를 통해 사용자가 스크롤을 내려도 이 것을 볼수있게 하였다.
+z-index의 default 값은 0이다. */
+.main_header-home {
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-left: 5px;
+  z-index: 3;
+}
+.main_header-language-text {
+  margin: 0px 10px;
+}
+.main_header-language-sort span {
+  margin-right: 5px;
+}
+.main_header-language-sort span:first-child {
+  color: darkorange;
+}
+/* .main_header-language-sort가 갖고있는 첫번째 span의
+색깔을 바꾸겠다는 의미이다. */
+.main_header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 25px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 0px;
+  z-index: 2;
+  background-color: wheat;
+  border-top: 1px solid rgba(0, 0, 0, 1);
+}
+.main_header-region {
+  display: flex;
+  border: 2px solid darkorange;
+  border-radius: 20px;
+  height: 30px;
+  width: 150px;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 10px;
+  margin: 0px 10px;
+}
+.main_header-region-text,
+.main_header-region-chevron {
+  margin-left: 5px;
+  color: darkorange;
+}
+.main_header-food {
+  position: fixed;
+  top: 85px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: yellow;
+  padding: 5px;
+  z-index: 1;
+}
+/* nav이다. */
+.main_header-food-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ul태그를 flex해서, ul태그의 자식들을
+justify-content,align-items를 통해 정렬했다. */
+.main_header-food-list {
+  color: darkorange;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* flex-direction:column을 해주게 되면
+안의 자식들의 행과 열을 바꾼다는 의미이고 가로축이였던
+justify-content는 세로축이 되고 세로축이었던
+align-item는 가로축이 된다. */
+.main_header-food-list-img {
+  margin-bottom: 5px;
+}
+.main_header-food-list-hansik-img {
+  color: red;
+}
+/* hansik-img-color */
+.main_header-food-list-hambuger-img {
+  color: tomato;
+}
+/* hambuger-img-color */
+.main_header-food-list-cafe-img {
+  color: chocolate;
+}
+/* cafe-img-color */
+.main_header-food-list-world_food-img {
+  color: violet;
+}
+/* world_food-img-color */

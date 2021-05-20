@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import "reset.css";
+@import "variables.css";
+/* components */
+@import "components/main_header.css";
+/* screens */
+@import "screens/hansik,hambuger.css";
+@import "screens/cafe,world_food.css";
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 1000vh;
+  background-color: wheat;
+}
+.survey_body {
+  background-color: white;
+}
+@media screen and (max-device-width: 800px) {
+  .survey_body span {
+    font-size: 5px;
+  }
+  label {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+}
